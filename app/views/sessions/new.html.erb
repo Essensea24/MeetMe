@@ -12,9 +12,12 @@
   <div>
   <br>
   <br>
-    <%= f.submit 'Log In' %>
+    <%= f.submit "Log Me In!", class: "btn btn-sm btn-info" %>
   </div>
 <% end %>
 <br>
-<%= link_to "<button>Authenticate with Facebook!</button".html_safe, "/auth/facebook" %> <%= link_to "<button>Back</button>".html_safe, users_path %>
+
+
+<%#= link_to "Sign in via Facebook!", "/auth/facebook", class: "btn btn-sm btn-info" %>  
+<%= link_to "Back", users_path, class: "btn btn-sm btn-info" %>
 
