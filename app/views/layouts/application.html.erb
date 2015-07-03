@@ -8,12 +8,15 @@
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 </head>
+<%= params.inspect %>
 <body>
 
 <nav class="navbar navbar-inverse navbar-static-top">
     <ul class="nav navbar-nav">
         <li><a href="/">Home</a></li>
-        <% if session['auth'] %>
+       
+        <% if session['auth'] or current_user %>
+         <li><a href="/login">Login</a></li>
         <li><a href="/sessions/show">Profile</a></li>
         <li><a href="/auth/logout">Logout</a></li>
         <% else %>
