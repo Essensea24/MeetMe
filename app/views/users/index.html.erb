@@ -3,6 +3,11 @@
 	<li>Firstname:<%= u.firstname %></li>
 	<li>Lastname:<%= u.lastname %></li>
 	<li>Email:<%= u.email %></li>
+	<li><%= link_to "User Page", user_path(u)%>
+	<li><%= link_to "edit", edit_user_path(u)%>
+	<li><%= link_to "Delete", user_path(u), method: :delete, data: { confirm: "Are you sure you want to delete your account?"} %>
+
+
 	</ul>
 <%end %>
 <%= link_to 'Log Out', logout_path, method: :delete %>
