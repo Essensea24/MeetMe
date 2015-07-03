@@ -10,6 +10,11 @@
     <%= f.password_field :password %>
   </div>
   <div>
+  <br>
+  <br>
     <%= f.submit 'Log In' %>
   </div>
 <% end %>
+<br>
+<%= link_to "<button>Authenticate with Facebook!</button".html_safe, "/auth/facebook" %> <%= link_to "<button>Back</button>".html_safe, users_path %>
+
