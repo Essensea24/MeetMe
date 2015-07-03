@@ -1,16 +1,13 @@
 Rails.application.routes.draw do
-  root 'users#index'
+  root "users#index"
+  resources :users
   
-  resources :users do
-  end 
 
-  get "/auth/:provider/callback" => "sessions#create"
+  get "/auth/:provider/callback" => "sessions#create" 
   get 'sessions/show'
   get 'auth/logout' => 'sessions#destroy'
 
-  get '/login'     => 'sessions#new'
-  post '/login'    => 'sessions#create' 
-  delete '/logout' => 'sessions#destroy'
+ 
 
   
   # The priority is based upon order of creation: first created -> highest priority.
