@@ -36,7 +36,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem "omniauth"
-gem "omniauth-github"
+
 gem "figaro"
 
 gem "omniauth-facebook"
