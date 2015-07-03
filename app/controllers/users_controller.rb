@@ -22,9 +22,9 @@ class UsersController < ApplicationController
     #injected with the before_action
   end
 
-  # def edit 
-  #   #injected with the before_action
-  # end 
+  def edit 
+    #injected with the before_action
+  end 
 
   # def update
   #   #injected with the before_action
