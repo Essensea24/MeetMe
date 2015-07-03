@@ -1,2 +1,58 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<div class = "signup">
+<h1>Don't have  an account? <br>Sign up Now</h1>
+
+<%= form_for(@user) do |f| %>
+<!-- setting condition to display errors if any save/create a new article if there is an error -->
+ 
+	<% if @user.errors.any? %>
+		<div id="error_explanation">
+		<h2>
+			<%= pluralize(@user.errors.count, "error") %> prohibited
+			this user from being saved:
+		</h2>
+			<ul>
+				<% @user.errors.full_messages.each do |msg| %>
+					  <li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<p>
+		<%= f.label :firstname %><br>
+		<%= f.text_field :firstname %>
+	</p>
+
+	<p>
+		<%= f.label :lastname %><br>
+		<%= f.text_area :lastname %>
+	</p>
+
+	<p>
+		<%= f.label :username %><br>
+		<%= f.text_area :username %>
+	</p>
+
+	<p>
+		<%= f.label :email %><br>
+		<%= f.text_area :email %>
+	</p>
+
+	<p>
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+	</p>
+
+	<p>
+		<%= f.label :password_confirmation %>
+		<%= f.password_field :password_confirmation %>
+	</p>
+
+	
+	<p>
+		<%= f.submit %>
+	</p>
+
+<% end %>
+
+</div>
