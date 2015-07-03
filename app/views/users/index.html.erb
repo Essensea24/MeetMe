@@ -1,5 +1,6 @@
 <% @users.each do |u| %>
 	<ul><h2><%= u.username %></h2>
+	<%= image_tag u.image.url(:small)%>
 	<li>Firstname:<%= u.firstname %></li>
 	<li>Lastname:<%= u.lastname %></li>
 	<li>Email:<%= u.email %></li>
