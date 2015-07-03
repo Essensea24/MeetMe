@@ -26,10 +26,10 @@ class UsersController < ApplicationController
     #injected with the before_action
   end 
 
-  # def update
-  #   #injected with the before_action
+  def update
+    #injected with the before_action
 
-  # end
+  end
 
   # def destroy
   #   #injected with the before_action
