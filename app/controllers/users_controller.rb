@@ -28,12 +28,19 @@ class UsersController < ApplicationController
 
   def update
     #injected with the before_action
+     if @user.update(user_params)
+      redirect_to user_path(@user), notice: 'User profile was successfully updated.'
+    else
+      render :edit
+    end
 
   end
 
-  # def destroy
-  #   #injected with the before_action
-  # end
+  def destroy
+    #injected with the before_action
+    @user.destroy
+    redirect_to root_path
+  end
 
   private 
 
